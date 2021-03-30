@@ -22,8 +22,8 @@ public class Program {
 		for (int i = 1; i <= n; ++i) {
 			System.out.println("Employee #" + i + " data: ");
 			System.out.println("Outsorced y / n ? :");
-			char sn = sc.nextLine().charAt(0);
 			sc.nextLine();
+			char sn = sc.nextLine().charAt(0);
 			System.out.print("Name :");
 			name = sc.nextLine();
 			System.out.print("Hours :");
@@ -37,6 +37,12 @@ public class Program {
 			} else {
 				list.add(new Employee(name, hour, value));
 			}
+
+		}
+		System.out.println();
+		System.out.println("PAYMENT: ");
+		for (Employee emp : list) {
+			System.out.println("Name: " + emp.getName() + " R$ " + String.format("%.2f", emp.payment()));
 
 		}
 
